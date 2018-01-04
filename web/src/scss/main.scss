@@ -1,0 +1,47 @@
+@import '_reset';
+@import '_variables';
+@import '_navbar';
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.btn{
+	display: inline-block;
+	font-size: .8em;
+	padding: 4px 10px;
+	border-radius: 3px;
+	cursor: pointer;
+
+	&.btn-on{
+		color: #fff;
+		background-color: $color-primary;
+	}
+	&.btn-off{
+		background-color: $color-disabled;
+	}
+}
+
+
+.col-100, .col-50, .col-33, .col-25{
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.col-100{
+	width: 100%;
+}
+.col-50{
+	width: (100% / 2);
+}
+.col-33{
+	width: (100% / 3);
+}
+.col-25{
+	width: (100% / 4);
+}
