@@ -2,10 +2,16 @@ import "./scss/main.scss";
 
 import Vue from 'vue'
 
-import rootComponent from './components/root.vue';
+import ButtonComponent from './components/button.vue'
+import SceneComponent from './components/scene.vue'
 
-Vue.component('app', rootComponent)
+Vue.component('task', ButtonComponent)
+Vue.component('scene', SceneComponent)
+
 
 new Vue({
-	el: '#app'
+	el: '#app',
+	data: {
+		showTab: 1
+	}
 })

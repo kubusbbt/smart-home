@@ -8,13 +8,21 @@ nav{
     text-align: center;
 
     ul{
+        margin: 0;
+        padding: 0;
         list-style: none;
         padding: 10px 0;
     }
     li{
+        margin: 0;
+        padding: 0;
         display: inline-block;
         padding: 8px 15px;
         background: $color-disabled;
-        border-radius: 10px;
+        border-radius: 3px;
+
+        &.active{
+            background: $color-primary;
+        }
     }
 }

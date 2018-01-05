@@ -1,0 +1,59 @@
+body{
+	background: url('../assets/bg.jpg');
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	padding-top: 40px;
+}
+
+#app{
+	float: left;
+	padding-bottom: 70px;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.wrapper{
+	// position: absolute;
+	width: 100%;
+	// left: 0;
+	// bottom: 70px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.btn{
+	display: inline-block;
+	font-size: 1.3em;
+	padding: 4px 10px;
+	border-radius: 3px;
+	cursor: pointer;
+	text-align: center;
+
+	&.btn-on{
+		color: #fff;
+		background-color: $color-primary;
+	}
+	&.btn-off{
+		background-color: $color-disabled;
+	}
+}
+
+.col-100, .col-50, .col-33, .col-25{
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.col-100{
+	width: 100%;
+}
+.col-50{
+	width: (100% / 2);
+}
+.col-33{
+	width: (100% / 3);
+}
+.col-25{
+	width: (100% / 4);
+}

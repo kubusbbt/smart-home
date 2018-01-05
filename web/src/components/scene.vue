@@ -5,9 +5,7 @@
 			<div>
 				<div class="title">{{ title }}</div>
 				<!-- <div class="content">{{ content }}</div> -->
-			
 				<div class="btn btn-on">ON</div>
-				<div class="btn btn-off">OFF</div>
 			</div>
 		</div>
 	</div>
@@ -16,7 +14,7 @@
 
 <script>
 	export default {
-		props: ['title', 'content', 'href']
+		props: ['title', 'content']
 	}
 </script>
 
@@ -34,12 +32,11 @@
 
 		.ico{
 			height: 30px;
-			margin-bottom: 10px;
+			margin-bottom: 20px;
 		}
 		.title{
 			font-weight: 600;
 			margin-bottom: 7px;
-			font-size: .8em;
 		}
 		.content{
 			margin-bottom: 8px;

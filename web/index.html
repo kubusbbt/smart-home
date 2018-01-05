@@ -4,11 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,viewport-fit=cover">
+
     <title>Document</title>
 </head>
 <body>
 	<div id="app">
-		<app></app>
+        
+        <section class="wrapper" v-if="showTab == 1">
+            <h2 class="section-title">Przyciski</h2>
+            
+            <task title="Żarówka" content="żarówka" href="google.pl"></task>
+            <task title="Sypialnia" content="gniazdko"></task>
+            <task title="Home" content="gniazdko"></task>
+            <task title="Choinka" content="gniazdko"></task>
+            <task title="Drukarka" content="gniazdko"></task>
+        </section>
+
+        <section class="wrapper" v-if="showTab == 2">
+            <h2 class="section-title">Sceny</h2>
+            
+            <scene title="TV" content="home/bulb"></scene>
+            <scene title="Sypialnia" content="-"></scene>
+            <scene title="Sen" content="-"></scene>
+        </section>
+
+        <nav>
+            <ul>
+                <li @click="showTab = 1" v-bind:class="{ active: showTab == 1 }">Przyciski</li>
+                <li @click="showTab = 2" v-bind:class="{ active: showTab == 2 }">Sceny</li>
+            </ul>
+        </nav>
+
 	</div>
     <script src="dist/build.js"></script>
 </body>
