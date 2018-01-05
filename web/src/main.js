@@ -15,6 +15,6 @@ new Vue({
 
 	data: {
 		showTab: 1
-	}
+	},
 
 })

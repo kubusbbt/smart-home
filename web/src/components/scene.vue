@@ -21,9 +21,7 @@
 
 		methods: {
 			getRequest: function(href){
-
 				axios.get(href).then(response => console.log(response));
-
 			}
 		}
 	}

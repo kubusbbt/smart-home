@@ -18,7 +18,7 @@
 
 
 <script>
-	
+
 	import axios from 'axios'
 	
 	export default {
@@ -26,9 +26,7 @@
 		
 		methods: {
 			getRequest: function(href){
-
 				axios.get(href).then(response => console.log(response));
-
 			}
 		}
 	}
