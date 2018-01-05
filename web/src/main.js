@@ -10,8 +10,11 @@ Vue.component('scene', SceneComponent)
 
 
 new Vue({
+
 	el: '#app',
+
 	data: {
 		showTab: 1
 	}
+
 })

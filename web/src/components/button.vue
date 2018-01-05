@@ -1,13 +1,16 @@
 <template>	
 	<div class="col-50">
 		<div class="component">
-			<img class="ico" src="../assets/idea.svg" alt="">
+			
+			<img v-show="type === 'bulb'" class="ico" src="../assets/idea.svg" alt="">
+			<img v-show="type === 'plug'" class="ico" src="../assets/plug.svg" alt="">
+			
 			<div>
 				<div class="title">{{ title }}</div>
 				<!-- <div class="content">{{ content }}</div> -->
 			
-				<div class="btn btn-on">ON</div>
-				<div class="btn btn-off">OFF</div>
+				<div class="btn btn-on" @click="getRequest(on)">ON</div>
+				<div class="btn btn-off" @click="getRequest(off)">OFF</div>
 			</div>
 		</div>
 	</div>
@@ -15,9 +18,21 @@
 
 
 <script>
+	
+	import axios from 'axios'
+	
 	export default {
-		props: ['title', 'content', 'href']
+		props: ['type', 'title', 'content', 'on', 'off'], 
+		
+		methods: {
+			getRequest: function(href){
+
+				axios.get(href).then(response => console.log(response));
+
+			}
+		}
 	}
+
 </script>
 
 

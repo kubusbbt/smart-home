@@ -14,20 +14,20 @@
 <body>
 	<div id="app">
         
-        <section class="wrapper" v-if="showTab == 1">
+        <section class="wrapper" v-show="showTab == 1">
             <h2 class="section-title">Przyciski</h2>
             
-            <task title="Żarówka" content="żarówka" href="google.pl"></task>
-            <task title="Sypialnia" content="gniazdko"></task>
-            <task title="Home" content="gniazdko"></task>
-            <task title="Choinka" content="gniazdko"></task>
-            <task title="Drukarka" content="gniazdko"></task>
+            <task title="Żarówka" type="bulb" content="żarówka" on="google.pl" off="google.com"></task>
+            <task title="Sypialnia" type="plug" content="gniazdko"></task>
+            <task title="Home" type="plug" content="gniazdko"></task>
+            <task title="Choinka" type="plug" content="gniazdko"></task>
+            <task title="Drukarka" type="plug" content="gniazdko"></task>
         </section>
 
-        <section class="wrapper" v-if="showTab == 2">
+        <section class="wrapper" v-show="showTab == 2">
             <h2 class="section-title">Sceny</h2>
             
-            <scene title="TV" content="home/bulb"></scene>
+            <scene title="TV" content="home/bulb" on="google.pl"></scene>
             <scene title="Sypialnia" content="-"></scene>
             <scene title="Sen" content="-"></scene>
         </section>

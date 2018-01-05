@@ -5,7 +5,7 @@
 			<div>
 				<div class="title">{{ title }}</div>
 				<!-- <div class="content">{{ content }}</div> -->
-				<div class="btn btn-on">ON</div>
+				<div class="btn btn-on" @click="getRequest(on)">ON</div>
 			</div>
 		</div>
 	</div>
@@ -13,8 +13,19 @@
 
 
 <script>
+
+	import axios from 'axios'
+	
 	export default {
-		props: ['title', 'content']
+		props: ['title', 'content', 'on'], 
+
+		methods: {
+			getRequest: function(href){
+
+				axios.get(href).then(response => console.log(response));
+
+			}
+		}
 	}
 </script>
 
