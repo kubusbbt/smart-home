@@ -14,7 +14,8 @@ new Vue({
 	el: '#app',
 
 	data: {
-		showTab: 1
+		showTab: 1,
+		loader: false
 	},
 
 })

@@ -22,11 +22,19 @@
 	import axios from 'axios'
 	
 	export default {
-		props: ['type', 'title', 'content', 'on', 'off'], 
-		
+		props: [
+			'type', 'title', 'content', 'on', 'off'
+		], 
 		methods: {
 			getRequest: function(href){
-				axios.get(href).then(response => console.log(response));
+				// href = 'http://192.168.1.14' + href;
+
+				document.getElementById('loader').style.display = 'block';
+				
+				axios.get(href).catch(function(){
+					document.getElementById('loader').style.display = 'none';
+				});
+				
 			}
 		}
 	}

@@ -9,27 +9,31 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="initial-scale=1,user-scalable=no,viewport-fit=cover">
 
-    <title>Document</title>
+    <title>Smart-house</title>
 </head>
 <body>
-	<div id="app">
-        
+    
+    <div id="app">
+        <div id="loader" style="display:none">
+            <img src="src/assets/loader.svg" alt="">
+        </div>
+
         <section class="wrapper" v-show="showTab == 1">
             <h2 class="section-title">Przyciski</h2>
             
-            <task title="Żarówka" type="bulb" content="żarówka" on="google.pl" off="google.com"></task>
-            <task title="Sypialnia" type="plug" content="gniazdko" on="google.pl" off="google.com"></task>
-            <task title="Home" type="plug" content="gniazdko" on="google.pl" off="google.com"></task>
-            <task title="Choinka" type="plug" content="gniazdko" on="google.pl" off="google.com"></task>
-            <task title="Drukarka" type="plug" content="gniazdko" on="google.pl" off="google.com"></task>
+            <task title="Żarówka" type="bulb" content="żarówka" on="http://cod3r.pl/bulb/?hash=kuba123&mode=on" off="http://cod3r.pl/bulb/?hash=kuba123&mode=off"></task>
+            <task title="Sypialnia" type="plug" content="gniazdko" on="http://192.168.1.14/clarus-3_on" off="http://192.168.1.14/clarus-3_off"></task>
+            <task title="Home" type="plug" content="gniazdko" on="http://192.168.1.14/clarus-2_on" off="http://192.168.1.14/clarus-2_off"></task>
+            <task title="Choinka" type="plug" content="gniazdko" on="http://192.168.1.14/dpm-1_on" off="http://192.168.1.14/dpm-1_off"></task>
+            <task title="Drukarka" type="plug" content="gniazdko" on="http://192.168.1.14/dpm-3_on" off="http://192.168.1.14/dpm-3_off"></task>
         </section>
 
         <section class="wrapper" v-show="showTab == 2">
             <h2 class="section-title">Sceny</h2>
             
-            <scene title="TV" content="home/bulb" on="google.pl" on="google.pl"></scene>
-            <scene title="Sypialnia" content="-" on="google.pl"></scene>
-            <scene title="Sen" content="-" on="google.pl"></scene>
+            <scene title="TV" content="home/bulb" on="" on=""></scene>
+            <scene title="Sypialnia" content="-" on=""></scene>
+            <scene title="Sen" content="-" on=""></scene>
         </section>
 
         <nav>
