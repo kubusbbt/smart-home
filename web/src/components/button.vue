@@ -31,9 +31,18 @@
 
 				document.getElementById('loader').style.display = 'block';
 				
-				axios.get(href).catch(function(){
-					document.getElementById('loader').style.display = 'none';
-				});
+				axios.get(href)
+					.then(function (response) {
+						document.getElementById('loader').style.display = 'none';
+					})
+					.catch(function (error) {
+						document.getElementById('loader').style.display = 'none';
+						alert('Brak odpowiedzi od serwera');
+					});
+
+				// axios.get(href).catch(function(){
+				// 	document.getElementById('loader').style.display = 'none';
+				// });
 				
 			}
 		}
