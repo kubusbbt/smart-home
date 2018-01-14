@@ -9,12 +9,20 @@
 #include <ESP8266WebServer.h>
 
 
+
 /**** Biblioteki RC switch *****/
 #include <RCSwitch.h>
 RCSwitch mySwitch = RCSwitch();
 
 
-ESP8266WebServer server(80);
+
+/**** TCP ****/
+//#include <WiFiServer.h>
+//#define PORT 1000
+//WiFiClient client;
+//WiFiServer server(PORT);
+//String dataClient;
+
 
 
 char auth[] = "f012bd4309ee48a6b7c8046fc7c0e13b";
@@ -25,20 +33,24 @@ char pass[] = "16031987";
 void setup()
 {
   Serial.begin(9600);
+
   
   Blynk.begin(auth, ssid, pass);
 
+
   // Numer pinu do wysyłki danych RC
   mySwitch.enableTransmit(D1);
-  
   mySwitch.setPulseLength(206);
 
-  serwer_setup();
+
+  /**** Połączenie z WiFi ****/
+//  WiFi.begin(ssid, pass);
+//  server.begin();
+
 }
 
 
 void loop()
 {
   Blynk.run();
-  server.handleClient();
 }
