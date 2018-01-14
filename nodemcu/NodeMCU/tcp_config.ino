@@ -10,7 +10,7 @@
 *    }  
 */
 
-/*
+
 int tcp_config()
 {
 
@@ -22,10 +22,12 @@ int tcp_config()
 }
 
 
-int tcp_click(char id){
-  while(!client.connected()){
-    client=server.available();
-  }
+int tcp_click(char id)
+{
+  
+//  while(!client.connected()){
+    client = server.available();
+//  }
 
   while( client.connected() ) {
     if(client.available()) {
@@ -46,5 +48,6 @@ int tcp_click(char id){
       }
     }
   }
+
 }
-*/
+

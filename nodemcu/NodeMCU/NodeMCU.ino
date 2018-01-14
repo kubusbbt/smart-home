@@ -17,11 +17,11 @@ RCSwitch mySwitch = RCSwitch();
 
 
 /**** TCP ****/
-//#include <WiFiServer.h>
-//#define PORT 1000
-//WiFiClient client;
-//WiFiServer server(PORT);
-//String dataClient;
+#include <WiFiServer.h>
+#define PORT 1000
+WiFiClient client;
+WiFiServer server(PORT);
+String dataClient;
 
 
 
@@ -44,8 +44,8 @@ void setup()
 
 
   /**** Połączenie z WiFi ****/
-//  WiFi.begin(ssid, pass);
-//  server.begin();
+  WiFi.begin(ssid, pass);
+  server.begin();
 
 }
 
@@ -53,4 +53,7 @@ void setup()
 void loop()
 {
   Blynk.run();
+
+  /**** Odpalenie funkcji do TCP ****/
+  tcp_config();
 }
