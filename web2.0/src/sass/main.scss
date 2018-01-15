@@ -1,8 +1,18 @@
+// @import '_reset';
+
+@import '../../node_modules/slick-carousel/slick/slick.css';
+
+// @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+
 body{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    // font-family: 'Source Sans Pro', sans-serif;
     // background-color: red;
-    margin-top: 75px;
+    // margin-top: 75px;
     background-image: url('../assets/bg.jpg');
-    background-size: cover;
+    background-repeat: no-repeat;
+    // background-size: cover;
 }
 
 [class*=uk-width]{

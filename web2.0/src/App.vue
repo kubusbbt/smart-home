@@ -1,70 +1,50 @@
 <template>
 	<div id="app">
 
+		<title-nav></title-nav>
 
-			<title-nav></title-nav>
-			<navbar></navbar>
+		<br>
+		<br>
+		<br>
+		<br>
 
-			<div uk-slideshow="animation: slide">
-				<div id="slider" class="uk-position-relative uk-visible-toggle uk-light">
-					<ul class="uk-slideshow-items" uk-height-viewport="min-height: 300">
-						<li>
-							<div>
-								<h2 class="screen-title">Lorem ipsum</h2>
+<div class="slider">
+	<div>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores quas, alias autem molestias harum ad accusantium porro vitae, dolorum sed dignissimos incidunt quae nostrum exercitationem eum! Modi reprehenderit quae odio cum sit nisi laboriosam quas, velit, animi sed corporis voluptatem distinctio tempora ratione eligendi cumque dolores error repellat incidunt doloribus est eos vel unde illum. Cumque ducimus omnis facilis et voluptate reiciendis quaerat quas aliquam repellat, iure enim deserunt nisi quibusdam maiores doloribus, ratione dolor illo. Tenetur eius optio non similique exercitationem inventore sequi. Sit officiis reiciendis suscipit dolor sed exercitationem officia fugit, cupiditate ea, recusandae id maiores accusantium?
+	</div>
+	<div>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores quas, alias autem molestias harum ad accusantium porro vitae, dolorum sed dignissimos incidunt quae nostrum exercitationem eum! Modi reprehenderit quae odio cum sit nisi laboriosam quas, velit, animi sed corporis voluptatem distinctio tempora ratione eligendi cumque dolores error repellat incidunt doloribus est eos vel unde illum. Cumque ducimus omnis facilis et voluptate reiciendis quaerat quas aliquam repellat, iure enim deserunt nisi quibusdam maiores doloribus, ratione dolor illo. Tenetur eius optio non similique exercitationem inventore sequi. Sit officiis reiciendis suscipit dolor sed exercitationem officia fugit, cupiditate ea, recusandae id maiores accusantium?
+	</div>
+	<div>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores quas, alias autem molestias harum ad accusantium porro vitae, dolorum sed dignissimos incidunt quae nostrum exercitationem eum! Modi reprehenderit quae odio cum sit nisi laboriosam quas, velit, animi sed corporis voluptatem distinctio tempora ratione eligendi cumque dolores error repellat incidunt doloribus est eos vel unde illum. Cumque ducimus omnis facilis et voluptate reiciendis quaerat quas aliquam repellat, iure enim deserunt nisi quibusdam maiores doloribus, ratione dolor illo. Tenetur eius optio non similique exercitationem inventore sequi. Sit officiis reiciendis suscipit dolor sed exercitationem officia fugit, cupiditate ea, recusandae id maiores accusantium?
+	</div>
+</div>
 
-								<card card-type="uk-card-default" card-title="Lorem ipsum">Lorem ipsum dolor sit amet</card>
-								<!-- <card card-type="uk-card-primary" card-title="Lorem ipsum">Lorem ipsum dolor sit amet</card> -->
-								<!-- <card card-type="uk-card-secondary" card-title="Lorem ipsum">Lorem ipsum dolor sit amet</card> -->
-							</div>
-						</li>
-						<li>
-							<h2 class="screen-title">Lorem ipsum</h2>
-							<!-- <card card-type="uk-card-primary" card-title="Lorem ipsum">Lorem ipsum dolor sit amet</card> -->
-						</li>
-					</ul>
-				</div>
-				<ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
-			</div>
 
-			<!-- <title-nav></title-nav> -->
-			<!-- <navbar></navbar> -->
-
-			<!-- <alert>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</alert> -->
-
-			<!-- <br> -->
-
-			<!-- <div class="uk-child-width-1-1 uk-grid-small uk-grid-match" uk-grid>
-				<card card-type="uk-card-default" card-title="Lorem ipsum">Lorem ipsum dolor sit amet</card>
-				<card card-type="uk-card-primary" card-title="Lorem ipsum">Lorem ipsum dolor sit amet</card>
-				<card card-type="uk-card-primary" card-title="Lorem ipsum">Lorem ipsum dolor sit amet</card>
-				<card card-type="uk-card-primary" card-title="Lorem ipsum">Lorem ipsum dolor sit amet</card>
-				<card card-type="uk-card-primary" card-title="Lorem ipsum">Lorem ipsum dolor sit amet</card>
-				<card card-type="uk-card-secondary" card-title="Lorem ipsum">Lorem ipsum dolor sit amet</card>
-			</div> -->
-
-			<!-- <card image="https://getuikit.com/docs/images/light.jpg" orientation="left" card-title="Media Left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</card> -->
-			<!-- <card image="https://getuikit.com/docs/images/light.jpg" orientation="right" card-title="Media Right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</card> -->
-			
 	</div>
 </template>
 
 <script>
 	import data from "./service.js";
+	import $ from "jquery";
 
 	export default {
 		data: function() {
 			return data;
 		},
-		name: "App"
+		name: "App",
+		mounted: function(){
+
+			$(".slider").slick({
+				// arrows: false,
+				// dots: true,
+			});
+
+		}
 	};
+
 </script>
 
 <style type="scss" scoped>
-	#slider{
-		/* height: calc( 100vh - 120px ); */
-		/* background: green; */
-	}
-	.screen-title{
-		margin-left: 20px;
-	}
+
 </style>

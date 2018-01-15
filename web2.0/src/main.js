@@ -1,5 +1,9 @@
-import uikitcss from '../node_modules/uikit/dist/css/uikit.min.css'
-import uikitjs from '../node_modules/uikit/dist/js/uikit.min.js'
+// import uikitcss from '../node_modules/uikit/dist/css/uikit.min.css'
+// import uikitjs from '../node_modules/uikit/dist/js/uikit.min.js'
+
+import jquery from 'jquery'
+import slick from '../node_modules/slick-carousel/slick/slick.min.js'
+
 
 import mainScss from './sass/main.scss';
 
