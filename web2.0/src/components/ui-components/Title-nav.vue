@@ -59,8 +59,11 @@ export default {
 
 
 <style lang="scss" scoped>
+
+    @import 'src/sass/_vars';
+
     .title{
-        background: rgba(0,0,0, 0.7);
+        background: $color-bg;
         padding: 10px 20px;
         text-align: left;
         position: fixed;
@@ -71,16 +74,18 @@ export default {
         box-sizing: border-box;
 
         h4{
-            color: #fff;
+            color: $color-font-dark;
             margin: 0;
-            font-size: 14px;
+            font-size: 16px;
+            font-weight: 600;
         }
         .clock{
-            color: rgba(255, 255, 255, .5);
+            color: $color-font-medium;
             font-size: 12px;
+            margin-top: 3px;
         }
         .date{
-            color: rgba(255, 255, 255, .5);
+            color: $color-font-medium;
             font-size: 12px;
         }
     }
@@ -97,7 +102,7 @@ export default {
         span{
             width: 100%;
             height: 2px;
-            background: #fff;
+            background: $color-primary;
             display: block;
             position: absolute;
             left: 0;

@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>web2.0</title>
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>web2.0</title>
+	<style src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css"></style>
+</head>
+
+<body>
+
+	<div id="app">
+
+			<div class="modal" v-if="viewModal">
+				<button class="btn btn-primary">ON</button>
+				<button class="btn btn-default">OFF</button>
+			</div>
+
+	</div>
+
+	<!-- <div class="modal">
+		<div class="range">
+			<span><span></span></span>
+		</div>
+	</div> -->
+
+	<!-- <div class="modal">
+		<div class="range-container">
+			<input type="text" id="example_id" name="example_name" value="">
+		</div>
+	</div> -->
+
+	<div class="parallax-window" data-parallax="scroll" data-image-src="https://www.istockphoto.com/resources/images/HomePage/Tiles/PatternsBackgrounds_641256498.jpg"></div>
+
+	<div id="modal" data-iziModal-fullscreen="true"  data-iziModal-title="Welcome"  data-iziModal-subtitle="Subtitle"  data-iziModal-icon="icon-home">
+			<button class="btn btn-default">ON</button>
+			<button class="btn btn-default">OFF</button>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
+
+	<script>
+		$("#modal").iziModal();
+	</script>
+</body>
 </html>

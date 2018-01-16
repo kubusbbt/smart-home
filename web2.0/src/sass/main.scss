@@ -1,18 +1,32 @@
-// @import '_reset';
+@import '_reset';
+@import '_vars';
+@import '_components';
+@import '_modal';
 
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 @import '../../node_modules/slick-carousel/slick/slick.css';
+@import '../../node_modules/izimodal/css/iziModal.min';
 
-// @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-
+@import '../vendor/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css';
+@import '../vendor/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5.css';
 
 body{
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    // font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     // background-color: red;
     // margin-top: 75px;
-    background-image: url('../assets/bg.jpg');
-    background-repeat: no-repeat;
+    // background-image: url('../assets/bg.jpg');
+    // background-repeat: no-repeat;
     // background-size: cover;
+    background-color: $color-bg;
+}
+
+.clearfix{
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
 }
 
 [class*=uk-width]{

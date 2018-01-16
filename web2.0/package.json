@@ -14,6 +14,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "izimodal": "^1.5.1",
     "jquery": "^3.2.1",
     "slick-carousel": "^1.8.1",
     "uikit": "^3.0.0-beta.36",

@@ -1,30 +1,37 @@
-// import uikitcss from '../node_modules/uikit/dist/css/uikit.min.css'
-// import uikitjs from '../node_modules/uikit/dist/js/uikit.min.js'
-
-import jquery from 'jquery'
-import slick from '../node_modules/slick-carousel/slick/slick.min.js'
-
-
-import mainScss from './sass/main.scss';
-
-import Vue from 'vue'
-import App from './App'
-import Titlenav from "./components/ui-components/Title-nav";
-import Alert from "./components/ui-components/Alert";
-import Card from "./components/ui-components/Card";
-import Navbar from "./components/ui-components/Navbar";
 
 Vue.config.productionTip = false
 
 
+import slick from '../node_modules/slick-carousel/slick/slick.min.js'
+import rangeSlider from './vendor/ion.rangeSlider-2.2.0/js/ion-rangeSlider/ion.rangeSlider.min.js'
+
+import mainScss from './sass/main.scss'
+
+import Vue from 'vue'
+import App from './App'
+
+
+
+/******************* Components ********************/
+import Titlenav from "./components/ui-components/Title-nav"
+import Slider from "./components/ui-components/Slider"
+
 Vue.component('title-nav', Titlenav)
-Vue.component('alert', Alert)
-Vue.component('card', Card)
-Vue.component('navbar', Navbar)
+Vue.component('slider', Slider)
+
+
+
+$("#example_id").ionRangeSlider({
+	min: 0,
+	max: 100,
+	from: 50,
+	hide_min_max: true,
+	hide_from_to: true,
+});
 
 
 new Vue({
-  el: '#app',
-  components: { App },
-  template: '<App/>'
+	el: '#app',
+	components: { App },
+	template: '<App/>'
 })
