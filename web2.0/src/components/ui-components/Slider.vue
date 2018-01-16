@@ -23,7 +23,7 @@
         $('.slick').slick({
             arrows: false,
             variableWidth: true,
-            infinite: false,
+            infinite: false
         });
     })
 

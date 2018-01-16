@@ -13,6 +13,6 @@
     align-items: center;
 }
 
-#app{
-    // filter: blur(3px);
+#app.modal-open>*:not(.modal){
+    filter: blur(3px);
 }
