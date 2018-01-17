@@ -3,14 +3,14 @@ let devices =
     sockets: 
     [
         {
-            name: 'clarus_1',
+            name: 'clarus_3',
             title: 'Sypialnia',
             description: 'Gniazdko w sypialni za łózkiem',
             status: 'click',
             class: 'box-default',
             commands: {
-                on: 1,
-                off: 2
+                on: 100,
+                off: 101
             }
         },
         {
@@ -20,10 +20,43 @@ let devices =
             status: 'click',
             class: '',
             commands: {
-                on: 3,
-                off: 4
+                on: 102,
+                off: 103
             }
-        }
+        },
+        {
+            name: 'dpm_1',
+            title: 'dpm_1',
+            description: '___',
+            status: 'click',
+            class: '',
+            commands: {
+                on: 104,
+                off: 105
+            }
+        },
+        {
+            name: 'dpm_2',
+            title: 'dpm_2',
+            description: '___',
+            status: 'click',
+            class: '',
+            commands: {
+                on: 106,
+                off: 107
+            }
+        },
+        {
+            name: 'dpm_3',
+            title: 'dpm_3',
+            description: '___',
+            status: 'click',
+            class: '',
+            commands: {
+                on: 108,
+                off: 109
+            }
+        },
     ],
     bulbs: [
         {
@@ -33,8 +66,8 @@ let devices =
             status: 'click',
             class: '',
             commands: {
-                on: 5,
-                off: 6
+                on: 200,
+                off: 201
             }
         }
     ],
@@ -45,7 +78,29 @@ let devices =
             description: 'Oglądanie TV',
             status: 'click',
             class: '',
-            commands: [7, 8]
+            commands: {
+                on: 300
+            }
+        },
+        {
+            name: 'sypialnia',
+            title: 'Sypialnia',
+            description: 'Sypialnia',
+            status: 'click',
+            class: '',
+            commands: {
+                on: 301
+            }
+        },
+        {
+            name: 'spac',
+            title: 'Spać',
+            description: 'Wyłącza wszystko',
+            status: 'click',
+            class: '',
+            commands: {
+                on: 302
+            }
         }
     ]
 }

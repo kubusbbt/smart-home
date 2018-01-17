@@ -61,27 +61,27 @@
                 document.getElementById('app').classList.remove('modal-open')
             },
             modalOn: function() {
-                // console.log( this.service.activeDevice.commands.on )
                 this.ajaxRequest( this.service.activeDevice.commands.on )
             },
             modalOff: function() {
-                console.log( this.service.activeDevice.commands.off )
+               this.ajaxRequest( this.service.activeDevice.commands.off )
             },
             activateScene: function(scene) {
-                for( var command in scene.commands ){
-                    console.log( scene.commands[command] )
-                }
-            },
+                this.ajaxRequest( scene.commands.on )
+            },    
             ajaxRequest: function(command) {
-                $.ajax({
-                    url: 'http://cod3r.pl/smart-home/tcp-service/',
-                    type: 'POST',
-                    data: {hash: '123qwe', command: command},
 
-                    success: function(data) {
-                        console.log(data);
-                    }
-                });
+                console.log( command )
+                
+                // $.ajax({
+                //     url: 'http://cod3r.pl/smart-home/tcp-service/',
+                //     type: 'POST',
+                //     data: {type: 'socket', command: command},
+
+                //     success: function(data) {
+                //         console.log(data);
+                //     }
+                // });
             }
         },
 		name: "App"
