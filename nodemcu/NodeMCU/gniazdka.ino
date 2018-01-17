@@ -1,9 +1,17 @@
-
 /*
-* DNIAZDKA CLARUS
+Sposób na wysyłanie kodu ze zmiennej
+
+char *ddd = "010001010101010111000011";
+mySwitch.send(ddd);
 */
 
-int clarus_3(String set){
+
+
+/*
+* GNIAZDKA CLARUS
+*/
+
+int clarus_3(String set){  
   if( set == "on"){
       mySwitch.send( "010001010101011100000011" ); // gniazdko 3 - on
   }else{
