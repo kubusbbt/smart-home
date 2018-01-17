@@ -73,15 +73,15 @@
 
                 console.log( command )
                 
-                // $.ajax({
-                //     url: 'http://cod3r.pl/smart-home/tcp-service/',
-                //     type: 'POST',
-                //     data: {type: 'socket', command: command},
+                $.ajax({
+                    url: 'http://cod3r.pl/smart-home/web2.0/app/tcp-service/',
+                    type: 'POST',
+                    data: {type: 'socket', command: command},
 
-                //     success: function(data) {
-                //         console.log(data);
-                //     }
-                // });
+                    success: function(data) {
+                        console.log(data);
+                    }
+                });
             }
         },
 		name: "App"

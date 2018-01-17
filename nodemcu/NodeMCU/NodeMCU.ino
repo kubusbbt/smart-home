@@ -21,7 +21,7 @@ RCSwitch mySwitch = RCSwitch();
 #define PORT 1000
 WiFiClient client;
 WiFiServer server(PORT);
-String dataClient;
+//String dataClient;
 
 
 
@@ -55,5 +55,6 @@ void loop()
   Blynk.run();
 
   /**** Odpalenie funkcji do TCP ****/
-  tcp_config();
+  tcp();
+//  tcp_config();
 }

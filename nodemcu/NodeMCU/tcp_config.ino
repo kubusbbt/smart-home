@@ -8,57 +8,57 @@
 *    }  
 */
 
-int tcp_config()
+int tcp_test(String code)
 {
 
 	/*************** GNIAZDKA ***************/
 
-	if( tcp_click('100') )
+	if( code == "100" )
 	{
 		clarus_3("on");
 	}
 
-	if( tcp_click('101') )
+	if( code == "101" )
 	{
 		clarus_3("off");
 	}
 
-	if( tcp_click('102') )
+	if( code == "102" )
 	{
 		clarus_2("on");
 	}
 
-	if( tcp_click('103') )
+	if( code == "103" )
 	{
 		clarus_2("off");
 	}
 	
-	if( tcp_click('104') )
+	if( code == "104" )
 	{
 		dpm_1("on");
 	}
 
-	if( tcp_click('105') )
+	if( code == "105" )
 	{
 		dpm_1("off");
 	}
 
-	if( tcp_click('106') )
+	if( code == "106" )
 	{
 		dpm_2("on");
 	}
 
-	if( tcp_click('107') )
+	if( code == "107" )
 	{
 		dpm_2("off");
 	}
 
-	if( tcp_click('108') )
+	if( code == "108" )
 	{
 		dpm_3("on");
 	}
 
-	if( tcp_click('109') )
+	if( code == "109" )
 	{
 		dpm_3("off");
 	}
@@ -67,12 +67,12 @@ int tcp_config()
 
 	/*************** ŻARÓWKA ***************/
 	
-	if( tcp_click('200') )
+	if( code == "200" )
 	{
 		bulb_on();
 	}
 
-	if( tcp_click('201') )
+	if( code == "201" )
 	{
 		bulb_off();
 	}
@@ -81,20 +81,20 @@ int tcp_config()
 
 	/*************** SECENY ***************/
 
-	if( tcp_click('300') )
+	if( code == "300" )
 	{
 		bulb_on();
 		clarus_2("on");
 	}
 
-	if( tcp_click('301') )
+	if( code == "301" )
 	{
 		bulb_off();
     	clarus_2("off");
     	clarus_3("on");
 	}
 
-	if( tcp_click('302') )
+	if( code == "302" )
 	{
 		bulb_off();
 		dpm_1("off");
@@ -107,12 +107,50 @@ int tcp_config()
 }
 
 
-int tcp_click(char id)
+
+
+
+
+
+
+int tcp()
 {
-  
-//  while(!client.connected()){
+  String dataClient;
+      
+  while(!client.connected()){
     client = server.available();
-//  }
+  }
+
+  while( client.connected() ) {
+    if(client.available()) {
+      while(client.available()){
+        char data = client.read();
+        dataClient += data;
+      }
+    }
+    tcp_test( dataClient );
+  } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+int tcp_click(char id)
+{  
+  
+  char dataClient = 0;
+  
+  while(!client.connected()){
+    client = server.available();
+  }
 
   while( client.connected() ) {
     if(client.available()) {
@@ -123,16 +161,19 @@ int tcp_click(char id)
 
         Serial.print( dataClient );
 
-        if( data == id ){
-          return true; 
-        }
-        else{
-          return false;
-        }
-
       }
     }
   }
+
+  if( dataClient == id ){
+    Serial.print("ok");
+//    return true; 
+  }
+  else{
+//    Serial.print("none");
+//    return false;
+  }
+  
 
 }
 

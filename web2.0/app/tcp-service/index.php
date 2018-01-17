@@ -8,14 +8,6 @@ class Tcp{
 
     function __construct()
     {
-        if( !$_POST ){
-            exit('err-post');
-        }
-
-        if( $_POST['hash'] !== '123qwe' ){
-            exit('err-hash');
-        }
-
         $this->command = $_POST['command'];
 
         $socket = $this->create_socket();
@@ -45,6 +37,7 @@ class Tcp{
     private function write_socket($socket)
     {
         socket_write($socket, intval($this->command), strlen($this->command));
+        // socket_write($socket, 234, 3);
     }
 
 }
