@@ -9,8 +9,8 @@ let devices =
             status: 'click',
             class: 'box-default',
             commands: {
-                on: 100,
-                off: 101
+                on: "A010001010101011100000011",
+                off: "A010001010101011100001100"
             }
         },
         {
@@ -20,8 +20,8 @@ let devices =
             status: 'click',
             class: '',
             commands: {
-                on: 102,
-                off: 103
+                on: "A010001010101010111000011",
+                off: "A010001010101010111001100"
             }
         },
         {
@@ -31,8 +31,8 @@ let devices =
             status: 'click',
             class: '',
             commands: {
-                on: 104,
-                off: 105
+                on: "0100011001011010000011110",
+                off: "0100011001011010000001110"
             }
         },
         {
@@ -42,8 +42,8 @@ let devices =
             status: 'click',
             class: '',
             commands: {
-                on: 106,
-                off: 107
+                on: "0100011001011010000010110",
+                off: "0100011001011010000000110"
             }
         },
         {
@@ -53,8 +53,8 @@ let devices =
             status: 'click',
             class: '',
             commands: {
-                on: 108,
-                off: 109
+                on: "0100011001011010000011010",
+                off: "0100011001011010000001010"
             }
         },
     ],
@@ -66,8 +66,8 @@ let devices =
             status: 'click',
             class: 'bg5',
             commands: {
-                on: 200,
-                off: 201
+                on: "B200",
+                off: "B201"
             }
         }
     ],
@@ -79,7 +79,7 @@ let devices =
             status: 'click',
             class: 'bg3',
             commands: {
-                on: 300
+                on: "C300"
             }
         },
         {
@@ -89,7 +89,7 @@ let devices =
             status: 'click',
             class: 'bg4',
             commands: {
-                on: 301
+                on: "C301"
             }
         },
         {
@@ -99,7 +99,7 @@ let devices =
             status: 'click',
             class: 'bg2',
             commands: {
-                on: 302
+                on: "C302"
             }
         }
     ]

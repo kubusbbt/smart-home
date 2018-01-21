@@ -36,8 +36,9 @@ class Tcp{
 
     private function write_socket($socket)
     {
-        socket_write($socket, intval($this->command), strlen($this->command));
-        // socket_write($socket, 234, 3);
+        // socket_write($socket, intval($this->command), strlen($this->command));
+        socket_write($socket, $this->command, strlen($this->command));
+        // socket_write($socket, "B" . "201", 4);
     }
 
 }
