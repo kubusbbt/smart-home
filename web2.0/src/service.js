@@ -71,7 +71,7 @@ let devices =
             }
         }
     ],
-    scenes: [
+    scenes: [     
         {
             name: 'tv',
             title: 'TV',
@@ -101,7 +101,32 @@ let devices =
             commands: {
                 on: "C302"
             }
-        }
+        },
+        {
+            name: 'test',
+            title: 'test',
+            description: 'test',
+            status: 'click',
+            class: '',
+            commands: {
+                sockets: [
+                    {
+                        name: 'clarus_2',
+                        command: 'on'
+                    },
+                    {
+                        name: 'clarus_3',
+                        command: 'off'
+                    }
+                ],
+                bulbs: [
+                    {
+                        name: 'yellight_1',
+                        command: 'on'
+                    }
+                ]
+            }
+        },   
     ]
 }
 

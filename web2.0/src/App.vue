@@ -70,6 +70,16 @@
             },
             activateScene: function(scene) {
                 this.ajaxRequest( scene.commands.on )
+
+                for( var a in scene.commands ){
+                    var arr = scene.commands[a]
+                    
+                    for( var b in arr ){
+                        console.log( arr[b].name )
+                        console.log( arr[b].command )
+                    }
+                }    
+
             },    
             ajaxRequest: function(command) {
 
