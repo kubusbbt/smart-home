@@ -3,10 +3,12 @@
 		<title-nav></title-nav>
 		<br><br><br><br><br><br>
 
-        <div class="modal" v-if="service.showModal" @click="hideModal">
-            <button class="btn btn-primary" @click="modalOn">ON</button>
-            <button class="btn btn-default" @click="modalOff">OFF</button>
-        </div>
+        <transition name="fade">
+            <div class="modal" v-if="service.showModal" @click="hideModal">
+                <button class="btn btn-primary" @click="modalOn">ON</button>
+                <button class="btn btn-default" @click="modalOff">OFF</button>
+            </div>
+        </transition>
 
 		<slider slider-title="Gniazdka">
             <div v-for="socket in service.devices.sockets">

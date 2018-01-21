@@ -16,3 +16,11 @@
 #app.modal-open>*:not(.modal){
     filter: blur(3px);
 }
+
+.fade-enter-active, .fade-leave-active {
+    transition: all .3s;
+}
+.fade-enter, .fade-leave-to{
+    top: -100%;
+    background: rgba(255,255,255,0);
+}

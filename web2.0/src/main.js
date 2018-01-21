@@ -14,7 +14,7 @@ import App from './App'
 
 /******************* Components ********************/
 import Titlenav from "./components/ui-components/Title-nav"
-import Slider from "./components/ui-components/Slider"
+import Slider from "./components/ui-components/Slider-scroll"
 
 Vue.component('title-nav', Titlenav)
 Vue.component('slider', Slider)

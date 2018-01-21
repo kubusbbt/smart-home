@@ -64,7 +64,7 @@ let devices =
             title: 'Zarówka',
             description: 'Lampka w salonie',
             status: 'click',
-            class: '',
+            class: 'bg5',
             commands: {
                 on: 200,
                 off: 201
@@ -77,7 +77,7 @@ let devices =
             title: 'TV',
             description: 'Oglądanie TV',
             status: 'click',
-            class: '',
+            class: 'bg3',
             commands: {
                 on: 300
             }
@@ -87,7 +87,7 @@ let devices =
             title: 'Sypialnia',
             description: 'Sypialnia',
             status: 'click',
-            class: '',
+            class: 'bg4',
             commands: {
                 on: 301
             }
@@ -97,7 +97,7 @@ let devices =
             title: 'Spać',
             description: 'Wyłącza wszystko',
             status: 'click',
-            class: '',
+            class: 'bg2',
             commands: {
                 on: 302
             }

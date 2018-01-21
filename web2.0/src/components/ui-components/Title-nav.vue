@@ -1,14 +1,15 @@
 <template>
     <div class="title">
-        <h4>Lorem Ipsum</h4>
+        <h4>Start Home</h4>
         <div class="clock">00:00:00</div>
         <div class="date">&nbsp;</div>
         
-        <button uk-toggle="target: #offcanvas-usage">
+        <!-- <button>
             <span></span>
             <span></span>
             <span></span>
         </button>
+         -->
     </div>
 </template>
 
@@ -65,6 +66,7 @@ export default {
     .title{
         background: $color-bg;
         padding: 10px 20px;
+        padding-top: 28px;
         text-align: left;
         position: fixed;
         top: 0;
@@ -72,6 +74,18 @@ export default {
         width: 100%;
         z-index: 2;
         box-sizing: border-box;
+
+        &:after{
+            content: '';
+            width: 100%;
+            height: 23px;
+            background: rgb(66, 66, 66);
+            // background: $color-primary;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
         h4{
             color: $color-font-dark;
