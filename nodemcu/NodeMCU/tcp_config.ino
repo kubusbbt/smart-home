@@ -127,6 +127,8 @@ int tcp()
   }
 
   while( client.connected() ) {
+    digitalWrite(D7, HIGH);
+    
     if(client.available()) {
       while(client.available()){
         
@@ -144,6 +146,8 @@ int tcp()
       }
     }
 
+    digitalWrite(D7, LOW);
+
 //    Serial.print(type);
 //    Serial.print("\n");
 //    Serial.print(dataClient);
@@ -153,6 +157,10 @@ int tcp()
     {
       String str_code = dataClient;
       const char *code = str_code.c_str();
+
+      digitalWrite(D7, HIGH); 
+      delay(100);
+      digitalWrite(D7, LOW); 
       
       mySwitch.send( code );
     }

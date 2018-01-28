@@ -34,6 +34,9 @@ void setup()
 {
   Serial.begin(9600);
 
+  // Testowa dioda
+  pinMode(D7, OUTPUT);
+
   
   Blynk.begin(auth, ssid, pass);
 
