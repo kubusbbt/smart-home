@@ -1,14 +1,4 @@
 
-// włącza żarówkę
-BLYNK_WRITE(V30){
-  bulb_on();
-}
-
-// wyłącza żarówkę
-BLYNK_WRITE(V31){
-  bulb_off();
-}
-
 
 // włącza żarówkę
 int bulb_on(){

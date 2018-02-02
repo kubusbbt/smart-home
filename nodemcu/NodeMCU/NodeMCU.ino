@@ -1,9 +1,6 @@
-#define BLYNK_PRINT Serial
-
 
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
-#include <BlynkSimpleEsp8266.h>
 
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
@@ -37,9 +34,6 @@ void setup()
   // Testowa dioda
   pinMode(D7, OUTPUT);
 
-  
-  Blynk.begin(auth, ssid, pass);
-
 
   // Numer pinu do wysyłki danych RC
   mySwitch.enableTransmit(D1);
@@ -55,7 +49,6 @@ void setup()
 
 void loop()
 {
-  Blynk.run();
 
   /**** Odpalenie funkcji do TCP ****/
   tcp();
