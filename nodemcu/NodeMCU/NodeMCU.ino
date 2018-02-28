@@ -32,7 +32,11 @@ void setup()
   Serial.begin(9600);
 
   // Testowa dioda
-  pinMode(D7, OUTPUT);
+//  pinMode(D7, OUTPUT);
+
+  // pin do resetowania
+  pinMode(D8, OUTPUT);
+  digitalWrite(D8, LOW);
 
 
   // Numer pinu do wysyłki danych RC
@@ -49,6 +53,8 @@ void setup()
 
 void loop()
 {
+
+  timer();
 
   /**** Odpalenie funkcji do TCP ****/
   tcp();
